@@ -34,10 +34,28 @@
             margin: 0 auto;
             font-size: 1.2em;
             line-height: 1.6;
+            padding: 20px; /* Add padding inside the border */
+            background-color: white; /* White background inside border */
+        }
+
+        .notice-header {
+            border: 3px solid #007bff; /* Add thicker border */
+            padding: 10px;
+            border-radius: 10px; /* Rounded corners */
+            text-align: center;
+            animation: flicker 3s infinite; /* Flickering text with fade effect */
+        }
+
+        .notice-box {
             border: 2px solid #007bff; /* Add border */
             padding: 20px; /* Add padding inside the border */
             border-radius: 10px; /* Rounded corners */
-            background-color: white; /* White background inside border */
+            margin-top: 20px;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         h2 {
@@ -114,12 +132,20 @@
     <div class="header">
         <img src="NITW logo (low).png" class="logo" alt="NITW Logo">
         <h1>National Institute of Technology, Warangal</h1>
+        <p>an initiative by the Student Council</p>
     </div>
 
     <div class="notice-container">
-        <h2>Latest Notices</h2>
-        <p>Seniors at NITW have been working to unify all the PYQs from every branch into a single source so that everyone can avail them. Click the link to get them. </p>
-        <a href="#" class="clickable-link" onclick="showPopup(event)">Google Drive Link</a>
+        <div class="notice-header">
+            <h2>Latest Notices</h2>
+        </div>
+        <div class="notice-box">
+            <p>Seniors at NITW have been working to unify all the PYQs from every branch into a single source so that everyone can avail them. Click the link to get them. </p>
+            <a href="#" class="clickable-link" onclick="showPopup(event)">Google Drive Link</a>
+        </div>
+        <div class="notice-box">
+            <p>Saraswati Pooja is going to be celebrated on 2nd and 3rd February at Stadium.</p>
+        </div>
     </div>
 
     <div id="modal" class="modal">
